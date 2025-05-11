@@ -2,7 +2,7 @@
 // 323089714 - Liraz
 // 207515768 - Reut
 // 323516682 - Margarita
-// repo link - https://github.com/reut-b/ex1b
+// repo link - https://github.com/reut-b/exx1b
 // date: 09-05-2025
 // Description: Server for personal profile website using Node.js and EJS
 
