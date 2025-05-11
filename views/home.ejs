@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>דף הבית</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>ברוך הבא, <%= user.firstName %></h1>
+        <nav>
+          <a href="/logout" class="logout-button">התנתק</a>
+        </nav>
+      </header>
+
+      <main class="profile-container">
+        <div class="profile-image">
+          <img
+            src="/profile-image/<%= user.profilePicture %>"
+            alt="תמונת פרופיל"
+          />
+        </div>
+
+        <div class="profile-details">
+          <h2>פרטים אישיים</h2>
+          <table>
+            <tr>
+              <th>שם משתמש:</th>
+              <td><%= user.username %></td>
+            </tr>
+            <tr>
+              <th>שם מלא:</th>
+              <td><%= user.firstName %> <%= user.lastName %></td>
+            </tr>
+            <tr>
+              <th>דואר אלקטרוני:</th>
+              <td><%= user.email %></td>
+            </tr>
+            <tr>
+              <th>תאריך לידה:</th>
+              <td><%= user.birthDate %></td>
+            </tr>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

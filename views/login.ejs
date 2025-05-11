@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>כניסה לאתר</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>כניסה למערכת</h1>
+
+      <% if (error) { %>
+      <div class="error-message"><%= error %></div>
+      <% } %>
+
+      <form action="/login" method="POST">
+        <div class="form-group">
+          <label for="username">שם משתמש:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">סיסמה:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <div class="form-group">
+          <button style="width: 100px" type="submit">כניסה</button>
+        </div>
+      </form>
+
+      <div class="register-link">
+        <p>אין לך חשבון? <a href="/signup">הירשם עכשיו</a></p>
+      </div>
+    </div>
+  </body>
+</html>
